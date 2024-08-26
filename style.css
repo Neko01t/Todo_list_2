@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin-top: 200px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2em;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    /* padding-top: 100px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('cool-background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.InputField {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.InputField::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.inputButton {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.4);
+}
+
+.inputButton:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.todo_Block {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 15px;
+    background-color: rgba(92, 92, 92, 0.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.inputfield {
+    width: 100%;
+    height: 40px;
+    resize: none;
+    font-size: 16px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.inputfield:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.inputfield::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .todo_Block {
+        padding: 15px;
+    }
+
+    .inputButton {
+        margin-left: 5px;
+        padding: 8px 15px;
+    }
+}
+
+.TodoTask {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.Task {
+    font-family: "Caveat", cursive;
+    flex: 1;
+    font-size: 25px;
+    transition: text-decoration 1s ease;
+    color: #333;
+    padding-left: 10px;
+    word-wrap: break-word;
+}
+
+.CheckTask {
+    margin-right: 15px;
+    transform: scale(1.2);
+}
+
+.ButtonTask {
+    background-color: #FF6B6B;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ButtonTask:hover {
+    background-color: #E85D5D;
+    transform: scale(1.1);
+}
+
+#taskList {
+    width: 100%;
+}
